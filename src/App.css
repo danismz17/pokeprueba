@@ -1,0 +1,550 @@
+::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+
+    border: 0px none #020000;
+    border-radius: 90px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #08aed3;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #666666;
+}
+
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+html {
+    background-color: rgba(0, 0, 0, 0.261);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    color: white;
+}
+
+:root {
+    /* identity */
+    --clr-Primary: #DC0A2D;
+
+    /* Tipos de Pokemon */
+    --clr-Bug: #A7B723;
+    --clr-Dark: #7557AC;
+    --clr-Dragon: #7037FF;
+    --clr-Electric: #F9CF30;
+    --clr-Fairy: #E69EAC;
+    --clr-Fighting: #C12239;
+    --clr-Fire: #F57D31;
+    --clr-Flying: #A891EC;
+    --clr-Ghost: #70559B;
+    --clr-Normal: #AAA67F;
+    --clr-Grass: #74CB48;
+    --clr-Ground: #DEC16B;
+    --clr-Ice: #9AD6DF;
+    --clr-Posion: #A43E9E;
+    --clr-Psychic: #FB5584;
+    --clr-Rock: #B69E31;
+    --clr-Steel: #B7B9D0;
+    --clr-Water: #6493EB;
+
+    /*Color de fuente */
+
+    --clr-font-dark-gray: #212121;
+    --clr-font-medium-gray: #666666;
+    --clr-font-light-gray: #e0e0e0;
+    --clr-font-white: #FFFFFF;
+    --clr-background: #f7f7f7;
+
+    /*Fuentes - Header */
+
+    --fnt-header-headline-bold: 700 24px;
+    --fnt-header-subtitle-1-bold: 700 14px;
+    --fnt-header-subtitle-2-bold: 700 12px;
+    --fnt-header-subtitle-3-bold: 700 10px;
+
+    /*Fuentes - Body */
+    --fnt-body-caption-regular: 400 8px;
+    --fnt-body-1-regular: 400 14px;
+    --fnt-body-2-regular: 400 12px;
+    --fnt-body-3-regular: 400 10px;
+
+    /*Sombras*/
+    /* 
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+    
+    */
+}
+
+.web-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--clr-Primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #212121;
+}
+
+.header-block-container {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#FDFCFB;
+}
+
+.logo-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color:#FDFCFB;
+}
+
+
+.logo-container img {
+    width: 24px;
+    height: 24px;
+    filter: invert(0%) sepia(4%) saturate(82%) hue-rotate(169deg) brightness(114%) contrast(74%);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logo-container h1 {
+    font: var(--fnt-header-headline-bold);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: var(--clr-font-dark-gray);
+}
+
+.web-header-background {
+    width: 50%;
+    height: 100%;
+    background-image: url(src/assets/Images/backgrounds/pk-portada-3.jpg);
+    background-image: url(src/assets/Images/backgrounds/pk-portada-2.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 700px;
+    /* clip-path: polygon(48% 0, 100% 0%, 100% 100%, 42% 100%, 0% 50%); */
+    
+
+}
+
+.filter-block-container {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-search-container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-search-container {
+    width: 280px;
+    height: 32px;
+    background-color: var(--clr-font-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.full-search-container img {
+    width: 16px;
+    height: 16px;
+    padding-left: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    filter: invert(22%) sepia(75%) saturate(6139%) hue-rotate(341deg) brightness(83%) contrast(109%);
+
+}
+
+.full-search-container input {
+    width: 280px;
+    height: 32px;
+    padding: 8px 16px 8px 12px;
+    background-color: transparent;
+    border-radius: 16px;
+    border: none;
+    color: var(--clr-font-dark-gray);
+}
+
+.full-search-container input:focus {
+    border: none;
+    outline: none;
+}
+
+.filter-container-button {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-container-button button {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+.filter-container-button button img {
+    width: 15px;
+    filter: invert(22%) sepia(75%) saturate(6139%) hue-rotate(341deg) brightness(83%) contrast(109%);
+}
+
+main {
+    width: 1366px;
+    height: 600px;
+    margin-top: 30px;
+    background-color: var(--clr-font-white);
+    box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: flex-start;
+    overflow-y: scroll;
+    gap: 8px;
+
+}
+
+.minicard {
+    width: 104px;
+    height: 108px;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.minicard-number{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.minicard-number p{
+    padding-right: 8px;
+    line-height: 12px;
+    font-size: 8px;
+    font-weight: 400;
+    color: var(--clr-font-medium-gray);
+}
+
+.minicard-image{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.minicard-image img{
+    width: 72px;
+    height: 72px;
+}
+
+.minicard-name{
+    width: 104px;
+    height: 45%;
+    background-color: #EFEFEF;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.minicard-name p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 16px;
+    color: #1D1D1D;
+}
+
+
+/* ____________MOBILE_____________ */
+
+@media (max-width: 700px) {
+
+    .web-container {
+        width: 360px;
+        height: 640px;
+        padding: 5px;
+    }
+
+    header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;        
+    }
+
+    .header-block-container {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .logo-container {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        background-color: var(--clr-Primary);
+    }
+
+    .logo-container img {
+        width: 24px;
+        height: 24px;
+        filter: invert(100%) sepia(4%) saturate(18%) hue-rotate(115deg) brightness(105%) contrast(105%);
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .logo-container h1 {
+        font: var(--fnt-header-headline-bold);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+        color: var(--clr-background);
+    }
+
+    .web-header-background {
+        width: 50%;
+        height: 100%;
+        background-image: none;
+        background-color: var(--clr-Primary);
+        clip-path: none;
+    }
+
+    .filter-block-container {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--clr-Primary);
+    }
+
+    .input-search-container {
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full-search-container {
+        width: 280px;
+        height: 32px;
+        background-color: var(--clr-font-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 16px;
+    }
+
+    .full-search-container img {
+        width: 16px;
+        height: 16px;
+        padding-left: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        filter: invert(22%) sepia(75%) saturate(6139%) hue-rotate(341deg) brightness(83%) contrast(109%);
+
+    }
+
+    .full-search-container input {
+        width: 280px;
+        height: 32px;
+        padding: 8px 16px 8px 12px;
+        background-color: transparent;
+        border-radius: 16px;
+        border: none;
+        color: var(--clr-font-dark-gray);
+    }
+
+    .full-search-container input:focus {
+        border: none;
+        outline: none;
+    }
+
+    .filter-container-button {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .filter-container-button button {
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+        border: none;
+    }
+
+    .filter-container-button button img {
+        width: 15px;
+        filter: invert(22%) sepia(75%) saturate(6139%) hue-rotate(341deg) brightness(83%) contrast(109%);
+    }
+
+    main {
+        width: 335px;
+        height: 600px;
+        margin-top: 30px;
+        background-color: var(--clr-font-white);
+        box-shadow: inset 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 24px;
+        padding-bottom: 12px;
+        display: flex;
+        flex-wrap: wrap; 
+        align-content: flex-start;
+        overflow-y: scroll;
+        gap: 8px;
+    }
+
+    .minicard {
+        width: 104px;
+        height: 108px;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .minicard-number{
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    .minicard-number p{
+        padding-right: 8px;
+        line-height: 12px;
+        font-size: 8px;
+        font-weight: 400;
+        color: var(--clr-font-medium-gray);
+    }
+
+    .minicard-image{
+        width: 100%;
+        height: 40%;
+         display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 10px;
+    }
+
+    .minicard-image img{
+        width: 72px;
+        height: 72px;
+    }
+
+    .minicard-name{
+        width: 104px;
+        height: 45%;
+        background-color: #EFEFEF;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .minicard-name p{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 16px;
+        color: #1D1D1D;
+    }
+
+
+}
