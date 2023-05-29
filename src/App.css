@@ -340,7 +340,7 @@ main {
 
     .web-container {
         width: 360px;
-        height: 640px;
+        height: 100vh;
         padding: 5px;
     }
 
