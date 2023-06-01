@@ -3,7 +3,7 @@ export default function Logo() {
         <>
         <div className="header-block-container">
             <div className="logo-container">
-                <img src="src/assets/Images/Icons/Pokeball.png" alt="" />
+                <img src="/Images/Icons/bg-pokeball.svg" alt="" />
                 <h1>Pokédex</h1>
             </div>
 

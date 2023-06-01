@@ -1,0 +1,281 @@
+.details__container {
+  width: 360px;
+  height: 640px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-color {
+  background-color: var(--clr-Fire);
+}
+
+.bg-card {
+  position: absolute;
+  object-fit: cover;
+  left: 47.2vw;
+  top: 0.5vw;
+  opacity: 0.15;
+}
+@media (min-width: 377px) and (max-width: 391px) {
+  .bg-card {
+    left: 40.9vw;
+    top: 1vw;
+  }
+}
+@media (max-width: 376px) {
+  .bg-card {
+    left: 41vw;
+    top: 1vw;
+  }
+}
+
+
+/* Header */
+.details__header {
+  width: 352px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.details__header_number {
+  font: var(--fnt-header-subtitle-2-bold);
+}
+
+.details__header_name {
+  position: relative;
+  left: -40px;
+  font: var(--fnt-header-headline-bold);
+  text-transform: capitalize;
+}
+
+/* Picture */
+.details__picture {
+  width: 352px;
+  height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  flex: 1;
+  position: relative;
+  top: 30px;
+  object-fit: fill;
+}
+
+.details__chevron_left,
+.details__chevron_right {
+  position: relative;
+  top: 20px;
+}
+
+.details__img {
+  object-fit:fill;
+  height: 200px;
+  width: 200px;
+}
+.details__img-size {
+  height: 200px;
+  width: 200px;
+}
+/* Detalles del pokemon */
+/* Card! */
+.details__card {
+  width: 352px;
+  height: 412px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  color: var(--clr-font-dark-gray);
+  background-color: var(--clr-background);
+  border-radius: 8px;
+  font: var(--fnt-body-3-regular);
+  padding-top: 40px;
+  margin-bottom: 4px;
+  /* Falta el shadow */
+  box-shadow: inset 0px 0.5px 3px 2px rgb(102, 102, 102, 0.4);
+}
+
+.details__card_type {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.details__type {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.type {
+  color: var(--clr-font-white);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font: var(--fnt-header-subtitle-3-bold);
+  text-transform: capitalize;
+  /* EXTRA: Agregar box-shadow */
+}
+
+/* Hacer todos los Colores  */
+.f-bg-fire {
+  background-color: var(--clr-Fire);
+}
+.f-fire {
+  color: var(--clr-Fire);
+  font: var(--fnt-header-subtitle-1-bold);
+  text-transform: capitalize;
+}
+
+
+
+.details__about_text {
+  width: 312px;
+  height: 60px;
+}
+.details__atributes {
+  width: 312px;
+  height: 48px;
+  font-size: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.details__atr_weight,
+.details__atr_height,
+.details__atr_moves {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2px;
+}
+
+.details__atr_weight-icon,
+.details__atr_height-icon {
+  display: flex;
+  gap: 8px;
+}
+
+.Z-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.details__atributes_alt {
+  font: var(--fnt-body-caption-regular);
+  color: var(--clr-font-medium-gray);
+}
+
+.details__atr_moves-move {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+
+  list-style: none;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+}
+
+.details__about_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stats */
+.stats__title {
+  margin-top: 0;
+}
+
+.stats__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 312px;
+  height: 96px;
+}
+
+.stats__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  color: var(--clr-Fire);
+  font: var(--fnt-header-subtitle-3-bold);
+  text-transform: uppercase;
+}
+
+.stats_counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.stats__text_counter {
+  font: var(--fnt-body-3-regular);
+}
+
+.stats_progres {
+  height: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.progres-bar {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  /* width: 233px; */
+  width: 233px;
+  height: 4px;
+
+  border-radius: 4px;
+  background-color: rgb(245, 125, 49, 0.2);
+}
+
+.progres-bar-charge {
+  position: relative;
+  flex-direction: column;
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  background-color: rgb(245, 125, 49);
+}
+
+/* --> VER <-- */
+.progres-1 {
+  width: 50%;
+}
+.progres-2 {
+  width: 15%;
+}
+.progres-3 {
+  width: 40%;
+}
+.progres-4 {
+  width: 49%;
+}
+.progres-5 {
+  width: 30%;
+}
+.progres-6 {
+  width: 70%;
+}

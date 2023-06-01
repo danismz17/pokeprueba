@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+
+:root {
+    /* identity */
+    --clr-Primary: #DC0A2D;
+
+    /* Tipos de Pokemon */
+    --clr-Bug: #A7B723;
+    --clr-Dark: #7557AC;
+    --clr-Dragon: #7037FF;
+    --clr-Electric: #F9CF30;
+    --clr-Fairy: #E69EAC;
+    --clr-Fighting: #C12239;
+    --clr-Fire: #F57D31;
+    --clr-Flying: #A891EC;
+    --clr-Ghost: #70559B;
+    --clr-Normal: #AAA67F;
+    --clr-Grass: #74CB48;
+    --clr-Ground: #DEC16B;
+    --clr-Ice: #9AD6DF;
+    --clr-Posion: #A43E9E;
+    --clr-Psychic: #FB5584;
+    --clr-Rock: #B69E31;
+    --clr-Steel: #B7B9D0;
+    --clr-Water: #6493EB;
+
+    /*Color de fuente */
+
+    --clr-font-dark-gray: #212121;
+    --clr-font-medium-gray: #666666;
+    --clr-font-light-gray: #e0e0e0;
+    --clr-font-white: #FFFFFF;
+    --clr-background: #f7f7f7;
+
+    /*Fuentes - Header */
+    --fnt-header-headline-bold: 700 24px "Poppins";
+    --fnt-header-subtitle-1-bold: 700 14px "Poppins";
+    --fnt-header-subtitle-2-bold: 700 12px "Poppins";
+    --fnt-header-subtitle-3-bold: 700 10px "Poppins";
+
+    /*Fuentes - Body */
+    --fnt-body-caption-regular: 400 8px "Poppins";
+    --fnt-body-1-regular: 400 14px "Poppins";
+    --fnt-body-2-regular: 400 12px "Poppins";
+    --fnt-body-3-regular: 400 10px "Poppins";
+
+    /*Sombras*/
+    /* 
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.4));
+
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.4);
+    
+    */
+}
