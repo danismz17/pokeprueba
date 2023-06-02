@@ -3,7 +3,7 @@ import { MiniCards } from './MiniCards';
 
 export default function Dashboard(props) {
 
-  let valorSearch = "Pr"
+  let valorSearch = "prueba"
 
 
   let arrayPrueba = [
@@ -34,7 +34,7 @@ export default function Dashboard(props) {
 
       {arrayPrueba.map((item, index) => (
 
-        item.nombre.includes(valorSearch) ?
+        item.nombre.toLocaleLowerCase().includes(valorSearch.toLowerCase()) ?
           <MiniCards
             key={index}
             nombre={item.nombre} 

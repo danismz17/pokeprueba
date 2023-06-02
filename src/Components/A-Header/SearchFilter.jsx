@@ -1,228 +1,315 @@
 // import React, { useState } from 'react';
 
+// const TypeContainer = ({ activeTag, handleTagClick }) => {
+//   const tagColors = {
+//     all: '#FFFFFF',
+//     bug: '#A7B723',
+//     dark: '#7557AC',
+//     dragon: '#7037FF',
+//     electric: '#F9CF30',
+//     fairy: '#E69EAC',
+//     fighting: '#C12239',
+//     fire: '#F57D31',
+//     flying: '#A891EC',
+//     ghost: '#70559B',
+//     normal: '#AAA67F',
+//     grass: '#74CB48',
+//     ground: '#DEC16B',
+//     ice: '#9AD6DF',
+//     poison: '#A43E9E',
+//     psychic: '#FB5584',
+//     rock: '#B69E31',
+//     steel: '#B7B9D0',
+//     water: '#6493EB',
+//   };
+
+//   return (
+//     <div className="type-container">
+//       <div className="tags-container">
+//         {Object.keys(tagColors).map((tag) => (
+//           <h6
+//             key={tag}
+//             id={tag}
+//             className={`type-tag ${activeTag === tag ? 'active' : ''}`}
+//             style={{ backgroundColor: activeTag === tag ? tagColors[tag] : '' }}
+//             onClick={() => handleTagClick(tag)}
+//           >
+//             {tag}
+//           </h6>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
+
 // export default function SearchFilter() {
-//     const [modalIsOpen, setModalIsOpen] = useState(false);
+//   const [modalIsOpen, setModalIsOpen] = useState(false);
+//   const [selectedIcon, setSelectedIcon] = useState('/Images/Icons/sort.svg');
+//   const [activeTag, setActiveTag] = useState(null);
 
-//     const openModal = () => {
-//         setModalIsOpen(true);
+//   const openModal = () => {
+//     setModalIsOpen(true);
+//   };
+
+//   const closeModal = () => {
+//     setModalIsOpen(false);
+//   };
+
+//   const handleCheckboxChange = (event) => {
+//     if (event.target.id === 'nameFilter' && event.target.checked) {
+//       setSelectedIcon('/Images/Icons/name.svg');
+//     } else if (event.target.id === 'numberFilter' && event.target.checked) {
+//       setSelectedIcon('/Images/Icons/tag.svg');
+//     } else {
+//       setSelectedIcon('/Images/Icons/sort.svg');
 //     }
+//   };
 
-//     const closeModal = () => {
-//         setModalIsOpen(false);
-//     }
+//   const handleTagClick = (tag) => {
+//     setActiveTag(tag);
+//   };
 
-//     return (
-//         <>
-//             <div className="filter-block-container">
-//                 <div className="input-search-container">
-//                     <div className="full-search-container">
-//                         <span><img src="Images/Icons/search.svg" alt="" /></span>
-//                         <input type="search" placeholder='Search' />
-//                     </div>
-//                 </div>
+//   return (
+//     <>
+//       <div className="filter-block-container">
+//         <div className="input-search-container">
+//           <div className="full-search-container">
+//             <span>
+//               <img src="Images/Icons/search.svg" alt="" />
+//             </span>
+//             <input type="search" placeholder="Search" />
+//           </div>
+//         </div>
 
-//                 <div className='filter-container-button'>
-//                     <button type="button" onClick={openModal}>
-//                         <img src="/Images/Icons/sort.svg" alt="" />
-//                     </button>
-//                 </div>
+//         <div className="filter-container-button">
+//           <button type="button" onClick={openModal}>
+//             <img src={selectedIcon} alt="" />
+//           </button>
+//         </div>
+//       </div>
+
+//       {modalIsOpen && (
+//         <div className="modal-overlay">
+//           <div className="modal">
+//             <div className="box-close-control">
+//               <button className="close-button" onClick={closeModal}>
+//                 <span>&times;</span>
+//               </button>
 //             </div>
 
-//             {modalIsOpen && (
-//                 <div className="modal-overlay">
-//                     <div className="modal">
-//                         <div className='box-close-control'>
-//                             <button className="close-button" onClick={closeModal}>
-//                                 <span>&times;</span>
-//                             </button>
-//                         </div>
-
-//                         <div className='check-box-container'>
-//                         <div className="numeric-filter">
-//                             <div className='titulo-filter-container'>
-//                                 <h3>Filtrar por numero</h3>
-//                             </div>
-
-//                             <div className='input-checkbox-container'>
-
-//                             </div>
-//                             <div className='separador'></div>
-//                         </div>
-
-//                         <div className="name-filter">
-//                             <div className='titulo-filter-container'>
-//                                 <h3>Filtrar por nombre</h3>
-//                             </div>
-
-//                             <div className='input-checkbox-container'>
-
-//                             </div>
-//                             <div className='separador'></div>
-//                         </div>
-
-//                         <div className="type-filter">
-//                             <div className='titulo-filter-container'>
-//                                 <h3>Filtrar por tipo</h3>
-//                             </div>
-
-
-
-
-
-
-
-
-
-
-//                             <div className='type-container'>
-
-
-
-
-
-
-
-//                             </div>
-//                             <div className='separador'></div>
-//                         </div>
-//                         </div>
-
-
-
-
-
-
-//                     </div>
+//             <div className="check-box-container">
+//               <div className="numeric-filter">
+//                 <div className="titulo-filter-container">
+//                   <h3>Filtrar por numero</h3>
 //                 </div>
-//             )}
-//         </>
-//     )
+
+//                 <div className="input-checkbox-container">
+//                   <input
+//                     name="cssCheckbox"
+//                     id="numberFilter"
+//                     type="checkbox"
+//                     className="css-checkbox"
+//                     onChange={handleCheckboxChange}
+//                   />
+//                   <label htmlFor="numberFilter">Activo</label>
+//                 </div>
+//                 <div className="separador"></div>
+//               </div>
+
+//               <div className="name-filter">
+//                 <div className="titulo-filter-container">
+//                   <h3>Filtrar por nombre</h3>
+//                 </div>
+
+//                 <div className="input-checkbox-container">
+//                   <input
+//                     name="cssCheckbox"
+//                     id="nameFilter"
+//                     type="checkbox"
+//                     className="css-checkbox"
+//                     onChange={handleCheckboxChange}
+//                   />
+//                   <label htmlFor="nameFilter">Activo</label>
+//                 </div>
+//                 <div className="separador"></div>
+//               </div>
+
+//               <div className="type-filter">
+//                 <div className="titulo-filter-container">
+//                   <h3>Filtrar por tipo</h3>
+//                 </div>
+
+//                 <TypeContainer activeTag={activeTag} handleTagClick={handleTagClick} />
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </>
+//   );
 // }
 
 
-import React, { useState, useEffect } from 'react';
+
+import React, { useState } from 'react';
+
+const TypeContainer = ({ activeTags, handleTagContainerClick }) => {
+  const tagColors = {
+    all: '#212121',
+    bug: '#A7B723',
+    dark: '#7557AC',
+    dragon: '#7037FF',
+    electric: '#F9CF30',
+    fairy: '#E69EAC',
+    fighting: '#C12239',
+    fire: '#F57D31',
+    flying: '#A891EC',
+    ghost: '#70559B',
+    normal: '#AAA67F',
+    grass: '#74CB48',
+    ground: '#DEC16B',
+    ice: '#9AD6DF',
+    poison: '#A43E9E',
+    psychic: '#FB5584',
+    rock: '#B69E31',
+    steel: '#B7B9D0',
+    water: '#6493EB',
+  };
+
+  const handleTagClick = (tag) => {
+    handleTagContainerClick(tag);
+  };
+
+  return (
+    <div className="type-container">
+      <div className="tags-container">
+        {Object.keys(tagColors).map((tag) => (
+          <h6
+            key={tag}
+            id={tag}
+            className={`type-tag ${activeTags.includes(tag) ? 'active' : ''}`}
+            style={{ backgroundColor: activeTags.includes(tag) ? tagColors[tag] : '' }}
+            onClick={() => handleTagClick(tag)}
+          >
+            {tag}
+          </h6>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default function SearchFilter() {
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    const words = ['All', 'Bug', 'Dark', 'Dragon', 'Electric', 'Fairy', 'Fighting', 'Fire', 'Flying', 'Ghost', 'Normal', 'Grass', 'Ground', 'Ice', 'Posion', 'Psychic', 'Rock', 'Steel', 'Water'];
-    const [currentIndex, setCurrentIndex] = useState(0);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedIcon, setSelectedIcon] = useState('/Images/Icons/sort.svg');
+  const [activeTags, setActiveTags] = useState([]);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
-        }, 2000);
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
 
-        return () => clearInterval(interval);
-    }, []);
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
 
-    const openModal = () => {
-        setModalIsOpen(true);
-    };
+  const handleCheckboxChange = (event) => {
+    if (event.target.id === 'nameFilter' && event.target.checked) {
+      setSelectedIcon('/Images/Icons/name.svg');
+    } else if (event.target.id === 'numberFilter' && event.target.checked) {
+      setSelectedIcon('/Images/Icons/tag.svg');
+    } else {
+      setSelectedIcon('/Images/Icons/sort.svg');
+    }
+  };
 
-    const closeModal = () => {
-        setModalIsOpen(false);
-    };
+  const handleTagContainerClick = (tag) => {
+    if (activeTags.includes(tag)) {
+      setActiveTags(activeTags.filter((activeTag) => activeTag !== tag));
+    } else {
+      if (activeTags.length < 2 && tag !== 'all') {
+        setActiveTags([...activeTags, tag]);
+      } else if (tag === 'all') {
+        setActiveTags([tag]);
+      }
+    }
+  };
 
-    const typeColors = {
-        All: '#212121',
-        Bug: '#A7B723',
-        Dark: '#7557AC',
-        Dragon: '#7037FF',
-        Electric: '#F9CF30',
-        Fairy: '#E69EAC',
-        Fighting: '#C12239',
-        Fire: '#F57D31',
-        Flying: '#A891EC',
-        Ghost: '#70559B',
-        Normal: '#AAA67F',
-        Grass: '#74CB48',
-        Ground: '#DEC16B',
-        Ice: '#9AD6DF',
-        Posion: '#A43E9E',
-        Psychic: '#FB5584',
-        Rock: '#B69E31',
-        Steel: '#B7B9D0',
-        Water: '#6493EB',
-    };
+  return (
+    <>
+      <div className="filter-block-container">
+        <div className="input-search-container">
+          <div className="full-search-container">
+            <span>
+              <img src="Images/Icons/search.svg" alt="" />
+            </span>
+            <input type="search" placeholder="Search" />
+          </div>
+        </div>
 
-    return (
-        <>
-            <div className="filter-block-container">
-                <div className="input-search-container">
-                    <div className="full-search-container">
-                        <span><img src="Images/Icons/search.svg" alt="" /></span>
-                        <input type="search" placeholder='Search' />
-                    </div>
-                </div>
+        <div className="filter-container-button">
+          <button type="button" onClick={openModal}>
+            <img src={selectedIcon} alt="" />
+          </button>
+        </div>
+      </div>
 
-                <div className='filter-container-button'>
-                    <button type="button" onClick={openModal}>
-                        <img src="/Images/Icons/sort.svg" alt="" />
-                    </button>
-                </div>
+      {modalIsOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <div className="box-close-control">
+              <button className="close-button" onClick={closeModal}>
+                <span>&times;</span>
+              </button>
             </div>
 
-            {modalIsOpen && (
-                <div className="modal-overlay">
-                    <div className="modal">
-                        <div className='box-close-control'>
-                            <button className="close-button" onClick={closeModal}>
-                                <span>&times;</span>
-                            </button>
-                        </div>
-
-                        <div className='check-box-container'>
-                            <div className="numeric-filter">
-                                <div className='titulo-filter-container'>
-                                    <h3>Filtrar por numero</h3>
-                                </div>
-
-                                <div className='input-checkbox-container'>
-                                    <input name="cssCheckbox" id="numberFilter" type="checkbox" class="css-checkbox" />
-                                    <label for="numberFilter">Activo</label>
-                                </div>
-
-
-
-
-
-                                <div className='separador'></div>
-                            </div>
-
-                            <div className="name-filter">
-                                <div className='titulo-filter-container'>
-                                    <h3>Filtrar por nombre</h3>
-                                </div>
-
-                                <div className='input-checkbox-container'>
-                                <input name="cssCheckbox" id="textFilter" type="checkbox" class="css-checkbox" />
-                                    <label for="textFilter">Activo</label>
-
-                                </div>
-                                <div className='separador'></div>
-                            </div>
-
-                            <div className="type-filter">
-                                <div className='titulo-filter-container'>
-                                    <h3>Filtrar por tipo</h3>
-                                </div>
-
-                                <div className='type-container'>
-                                    <div className="carousel-container">
-                                        <div className="carousel-content" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                                            {words.map((word, index) => (
-                                                <a key={index} href="#" className={`carousel-item ${index === currentIndex ? 'active' : ''}`} style={{ backgroundColor: typeColors[word] }}>
-                                                    {word}
-                                                </a>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div className="check-box-container">
+              <div className="numeric-filter">
+                <div className="titulo-filter-container">
+                  <h3>Filtrar por número</h3>
                 </div>
-            )}
-        </>
-    );
+
+                <div className="input-checkbox-container">
+                  <input
+                    name="cssCheckbox"
+                    id="numberFilter"
+                    type="checkbox"
+                    className="css-checkbox"
+                    onChange={handleCheckboxChange}
+                  />
+                  <label htmlFor="numberFilter">Activo</label>
+                </div>
+                <div className="separador"></div>
+              </div>
+
+              <div className="name-filter">
+                <div className="titulo-filter-container">
+                  <h3>Filtrar por nombre</h3>
+                </div>
+
+                <div className="input-checkbox-container">
+                  <input
+                    name="cssCheckbox"
+                    id="nameFilter"
+                    type="checkbox"
+                    className="css-checkbox"
+                    onChange={handleCheckboxChange}
+                  />
+                  <label htmlFor="nameFilter">Activo</label>
+                </div>
+                <div className="separador"></div>
+              </div>
+
+              <div className="type-filter">
+                <div className="titulo-filter-container">
+                  <h3>Filtrar por tipo</h3>
+                </div>
+
+                <TypeContainer activeTags={activeTags} handleTagContainerClick={handleTagContainerClick} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
