@@ -6,11 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Root from './Routes/Root'
 import PokeCard from './Components/C-Subcomponentes/PokeCard'
 
-
-
 // CSS
-import "./Styles/main.css" 
-
+import "./Styles/main.css"
 
 const router = createBrowserRouter([
   {
@@ -19,14 +16,14 @@ const router = createBrowserRouter([
     element: <Root />,
   },
   {
-    // Pokemon Stats
     path: 'pokemon/:pokemonId',
-    element: <PokeCard/>
+    element: <PokeCard />
   }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  // Para que no renderize dos veces la carga del fetch
+  // <React.StrictMode>
+  <RouterProvider router={router} />
+  // </React.StrictMode>,
 )

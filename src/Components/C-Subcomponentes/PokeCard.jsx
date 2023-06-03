@@ -1,7 +1,15 @@
 import '../../Styles/PokeCard.css'
 import React, { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
-import { PKCardDetailsCenter, PKCardDetailsTop, PkCardContainer, PkCardDetailsContainer, PkCardHeader, PkCardPicture, PkCardStats, PkCardStatsContainer } from './PokeCard.components';
+
+import { PkCardContainer } from './PokeCard.components/PkCardContainer';
+import { PkCardHeader } from './PokeCard.components/PkCardHeader';
+import { PkCardPicture } from './PokeCard.components/PkCardPicture';
+import { PkCardDetailsContainer } from './PokeCard.components/PkCardDetailsContainer';
+import { PKCardDetailsTop } from './PokeCard.components/PKCardDetailsTop';
+import { PKCardDetailsCenter } from './PokeCard.components/PKCardDetailsCenter';
+import { PkCardStatsContainer } from './PokeCard.components/PkCardStatsContainer';
+import { PkCardStats } from './PokeCard.components/PkCardStats';
 
 const PokeCard = () => {
   const { pokemonId } = useParams();
@@ -13,7 +21,6 @@ const PokeCard = () => {
       setIsLoading(true);
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}`);
       const responseOther = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}`);
-
       const responseData = await response.json();
       const responseOtherData = await responseOther.json();
 
@@ -24,18 +31,16 @@ const PokeCard = () => {
       setIsLoading(false);
       console.log("PokeCard: carga de datos completa");
     }
-  }
+  };
 
   useEffect(() => {
     getPokemonById();
   }, []);
-
   return (
     <>
       {isLoading && (
         <p>Pikachu corriendo - Loading...</p>
       )}
-
       {pokemon && (
         <PkCardContainer>
           <PkCardHeader
@@ -45,7 +50,6 @@ const PokeCard = () => {
           <PkCardPicture
             img={pokemon.sprites["other"]["official-artwork"]["front_default"]}
           />
-
           <PkCardDetailsContainer>
             <PKCardDetailsTop />
             <PKCardDetailsCenter
